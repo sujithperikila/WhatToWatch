@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  </head>
+  <body>
+    <div class = 'home_body'>
+        <a href="{{url_for('home')}}"><h1>What To Watch ?</h1></a>  
+    </div>
+    <p> Showing Results for "{{term}}"</p>
+    <div class="search_results">
+    <div class="row">
+        {% for i in range(0,length) %}
+        <div class="column">
+            <a href="{{url_for('search_details',id=ids[i])}}"><div><img src="{{images[i]}}" width="210px" height="295px"></div></a>
+            <p> {{names[i]}}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+    </div>
+
+    
+    
+
+  </body>
+</html>
