@@ -11,6 +11,7 @@ body{
   background: linear-gradient(120deg,#2980b9, #8e44ad);
   height: 100vh;
   overflow: scroll;
+  width : auto;
 }
 .center{
   position: absolute;
@@ -30,6 +31,7 @@ body{
 .home_body h1{
   text-align: center;
   padding: 20px 0;
+  color: #ffffff;
   /* border-bottom: 1px solid silver; */
 }
 .boxl button{
@@ -48,6 +50,8 @@ body{
   outline: none;
 }
 
+
+
 .search_bar button{
   position: absolute;
   top: 28%;
@@ -63,6 +67,22 @@ body{
   cursor: pointer;
   outline: none;
 }
+
+.buttongrp {
+  position: absolute;
+  top : 45%;
+  left : 33%;
+}
+.imgb{
+  cursor: pointer;
+}
+
+.logout{
+  position: absolute;
+  top: 80%;
+  left: 43%;
+}
+
 
 
 .boxl button:hover{
@@ -235,4 +255,67 @@ input[type="submit"]:hover{
   content: "";
   clear: both;
   display: table;
+}
+
+
+
+.imgcenter {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.userinp{
+  position: absolute;
+  padding: 10px;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  height: 250px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background: linear-gradient(120deg,#79000c, #15011d);
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+
+.userinp form{
+  margin: 0 auto;
+  margin-left: 25%;
+  padding: 30px;
+}
+
+.select{
+  left : 40px;
+}
+
+.userinp select{
+  /* position: absolute; */
+  height: 30px;
+  width: 200px;
+  background-color: #f5f8fa;
+  text-align: center;
+}
+.userinp select:hover{
+  /* position: absolute; */
+  background-color: #99d6ff;
+  
+}
+
+
+.userinp input[type="submit"]{
+  width: 200px;
+  height: 30px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #99d6ff;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.userinp input[type="submit"]:hover{
+  background: darkgreen;
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  </head>
+  <body>
+    <div class = 'home_body'>
+      <a href="{{url_for('home')}}"><h1>What To Watch ?</h1></a>        
+    </div>
+    <div class="userinp">
+        <p style="color: azure;text-align: center;"> Please Select your Desired Options </p>
+        <!-- <div class="select">
+            <select name="language">
+                <option>Select Language</option>
+                {% for i in range(0,ll) %}
+                <option value="{{langs[i]}}">{{langs[i]}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="select"></div>
+            <select id="genre" name="genre">
+                <option>Select Genre</option>
+                {% for i in range(0,gl) %}
+                <option value="{{genres[i]}}">{{genres[i]}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Submit"> -->
+
+        <form method="post">
+            <select name="language">
+                <option>Select Language</option>
+                {% for i in range(0,ll) %}
+                <option value="{{langs[i]}}">{{langs[i]}}</option>
+                {% endfor %}
+            </select><br>
+            <br>
+
+            <select id="genre" name="genre">
+                <option>Select Genre</option>
+                {% for i in range(0,gl) %}
+                <option value="{{genres[i]}}">{{genres[i]}}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+  </body>
+</html>

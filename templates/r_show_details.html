@@ -11,7 +11,7 @@
       <a href="{{url_for('home')}}"><h1>What To Watch ?</h1></a>     
     </div>
   
-    <img class="imgcenter" src="{{show['image']['medium']}}" width="210px" height="295px">
+    <img class="imgcenter" src="{{image}}" width="210px" height="295px">
     <p> <u>Created By</u> : {{owner}}</p>
     <p> <u>Rating</u> : {{show['rating']['average']}}</p>
     <p> <u>Time</u> : {{stramat}}</p>
@@ -21,7 +21,7 @@
     <p> <u>Summary</u> : {{summary}}</p>
     <p> <u>Genres</u> : {{genres}}</p>
     <p> <u>Premiere Date</u> : {{show['premiered']}}</p>
-    <a href="{{show['officialSite']}}"><p style="color: azure;">officialSite : {{show['officialSite']}}</p></a>
+    <a href="{{show['officialSite']}}"><p>officialSite : {{show['officialSite']}}</p></a>
 
     
 

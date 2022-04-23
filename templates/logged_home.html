@@ -10,16 +10,29 @@
     <div class = 'home_body'>
         <h1>What To Watch ?</h1>      
     </div>
+    
     <div class="search_bar">
         <form method="post">
             <div class="txt_field">
                 <input type="text" name='searchq' required>
-                <span></span>
+                <span></span>   
                 <label>Search for a TV Show</label>
               </div>
               <a href=''><button>Search</button></a>
         </form>
         
+    </div>
+
+    <div class="buttongrp">
+      <a href="{{url_for('rmas')}}"><div class="imgb"><img src="{{url_for('static',filename='b1.png')}}" width="450px" height="60px"></div></a>
+      <a href="{{url_for('rbui')}}"><div class="imgb"><img src="{{url_for('static',filename='b2.png')}}" width="450px" height="60px"></div></a>
+      <a href="{{url_for('reset_recom')}}"><div class="imgb"><img src="{{url_for('static',filename='b4.png')}}" width="450px" height="60px"></div></a>
+
+      
+    </div>
+
+    <div class="logout">
+      <a href="{{url_for('login')}}"><div class="imgb"><img src="{{url_for('static',filename='logout.png')}}" ></div></a>
     </div>
     
 
