@@ -2,6 +2,7 @@ click==8.1.2
 colorama==0.4.4
 cycler==0.10.0
 distlib==0.3.4
+datetime
 filelock==3.6.0
 Flask==2.1.1
 gunicorn==20.1.0
@@ -16,6 +17,7 @@ Pillow==8.4.0
 platformdirs==2.5.2
 pyparsing==2.4.7
 python-dateutil==2.8.2
+requests
 six==1.16.0
 virtualenv==20.14.1
 Werkzeug==2.1.1
