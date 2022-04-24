@@ -104,11 +104,7 @@ def search(term):
     
 @app.route('/show_details/<id>',methods=['POST','GET'])
 def search_details(id):
-    global all_shows
-    shows = all_shows
-    for show in shows:
-        if show['id'] == int(id):
-            break
+    show = tvobj.get_show_details(id)
     summary = show['summary']
     summary = html2text.html2text(summary)
     genres = show['genres']
