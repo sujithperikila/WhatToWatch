@@ -1,6 +1,7 @@
-from flask import Flask,request, render_template, url_for, redirect, session
+from flask import Flask,request, render_template, url_for, redirect, session, flash
 import os
 import html2text
+import time
 from login_database import Login_DataBase
 from user_database import User_Database
 from tv import show
@@ -47,6 +48,7 @@ def veify_login():
         logged_in = True
         return redirect(url_for('home'))
     else:
+        flash('Account Does Not Exist or Wrong Credentials Entered. Please Sign up or Enter Correct Details')
         return redirect('/signup')
 
 
@@ -73,6 +75,7 @@ def home():
 
     global logged_in
     if logged_in:
+        time.sleep(2)
         return render_template('logged_home.html')
     else:
         return redirect('/login')
@@ -226,6 +229,7 @@ def rbui():
 def reset_recom():
     global uname
     user_db_obj.reset_recommendations(uname)
+    flash('Your Recommendations are Rest !')
     return redirect('home')
 
 @app.route('/show_infos/<id>',methods = ['POST','GET'])
